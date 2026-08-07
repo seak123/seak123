@@ -1,6 +1,6 @@
-# Hi, I'm seak123 👋
+# Hi, I'm Yaxin(Evan) 👋
 
-**Gameplay programmer — Unity, Lua, and custom engine tooling.** Below is a multi-year trail of my game prototypes: mostly auto-battlers, card games, and tactics, plus a couple of editor tools and mini-games.
+**Gameplay programmer — UE, Unity, Lua, and custom engine tooling.** Below is a multi-year trail of my game prototypes: mostly auto-battlers, card games, and tactics, plus a couple of editor tools and mini-games.
 
 > 🗓️ **Project timeline** (newest → oldest). Dates are each project's inception, so the real chronology is clear regardless of GitHub's "last updated" sorting.
 
