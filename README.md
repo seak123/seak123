@@ -1,6 +1,22 @@
 # Hi, I'm Yaxin(Evan) 👋
 
-**Gameplay programmer — UE, Unity, Lua, and custom engine tooling.** Below is a multi-year trail of my game prototypes: mostly auto-battlers, card games, and tactics, plus a couple of editor tools and mini-games.
+**Gameplay programmer — Unreal Engine & C++ on a shipped commercial title, plus a long trail of Unity / Lua / custom-engine prototypes.** I build gameplay systems end to end — physics, netcode, data-oriented performance, and AI — and the tooling and workflows that let a whole team scale on them.
+
+## 💼 Commercial / Shipped Work
+
+Core systems I owned in a shipped commercial **open-world multiplayer** title (**Unreal Engine · C++**). The repositories below are **clean-room reference implementations** — architecture, design decisions, and technique, written for portfolio purposes with **no proprietary source**.
+
+| System | Repository | What it is |
+|---|---|---|
+| 🚢 **Watercraft physics & netcode** | [watercraft-physics](https://github.com/seak123/watercraft-physics) | Player-built, physically-simulated boats — two buoyancy solutions (sample-point & submerged-volume + center of buoyancy), frame-rate-independent substep physics, and multiplayer sync of players standing on a *moving, rotating* platform. |
+| 🏗️ **Data-oriented building** | [data-oriented-building](https://github.com/seak123/data-oriented-building) | ECS / Mass-style building system for **thousands** of persistent objects — entities + fragments instead of per-actor, instanced rendering, throttled delta replication, and an on-demand shared actor pool. |
+| ⚙️ **Automation AI** | [automation-ai-productionline](https://github.com/seak123/automation-ai-productionline) | Creature-driven production line on **GAS + behavior trees + navigation**, with clean system seams so one worker-AI drives any station by data alone. |
+
+<sub>These are reference write-ups authored by me to document architecture and technique; they contain no proprietary or third-party code.</sub>
+
+---
+
+## 🕹️ Indie prototypes & side projects
 
 > 🗓️ **Project timeline** (newest → oldest). Dates are each project's inception, so the real chronology is clear regardless of GitHub's "last updated" sorting.
 
