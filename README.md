@@ -6,11 +6,11 @@
 
 Core systems I owned in a shipped commercial **open-world multiplayer** title (**Unreal Engine · C++**). The repositories below are **clean-room reference implementations** — architecture, design decisions, and technique, written for portfolio purposes with **no proprietary source**.
 
-| System | Repository | What it is |
-|---|---|---|
-| 🚢 **Watercraft physics & netcode** | [watercraft-physics](https://github.com/seak123/watercraft-physics) | Player-built, physically-simulated boats — two buoyancy solutions (sample-point & submerged-volume + center of buoyancy), frame-rate-independent substep physics, and multiplayer sync of players standing on a *moving, rotating* platform. |
-| 🏗️ **Data-oriented building** | [data-oriented-building](https://github.com/seak123/data-oriented-building) | ECS / Mass-style building system for **thousands** of persistent objects — entities + fragments instead of per-actor, instanced rendering, throttled delta replication, and an on-demand shared actor pool. |
-| ⚙️ **Automation AI** | [automation-ai-productionline](https://github.com/seak123/automation-ai-productionline) | Creature-driven production line on **GAS + behavior trees + navigation**, with clean system seams so one worker-AI drives any station by data alone. |
+| System | Repository | Gameplay | Engineering |
+|---|---|---|---|
+| 🚢 **Watercraft physics & netcode** | [watercraft-physics](https://github.com/seak123/watercraft-physics) | Board and crew a player-built raft — paddle or raise the sail and catch the wind, steer by rudder, ride a trochoidal (Gerstner) wave field that shoals toward the coast. | Two buoyancy solutions behind one interface (sample-point vs submerged-volume with a true, self-moving center of buoyancy), frame-rate-independent fixed-substep physics, and sync of players walking on a *moving, rotating* platform via local-frame replication + prediction. |
+| 🏗️ **Data-oriented building** | [data-oriented-building](https://github.com/seak123/data-oriented-building) | Build freely from pieces that snap by priority, must be structurally supported or they collapse, and run production lines on fuel / workload / product queues. | ECS / Mass-style entities + fragments instead of per-actor for **thousands** of persistent objects — instanced rendering, throttled delta replication with weak-net adaptation, capped on-demand actor pool, and support propagation solved by amortized iterative relaxation. |
+| ⚙️ **Automation AI** | [automation-ai-productionline](https://github.com/seak123/automation-ai-productionline) | Assign creatures to stations and they run the line themselves — skill-typed jobs with headcounts, across 13 target kinds from Actors and foliage instances to purely virtual targets. | **GAS + behavior trees + navigation** behind clean seams, so one worker-AI drives any station by data alone; job-driven matching keeps multi-worker jobs staffed, with continuous and endless work modes. |
 
 <sub>These are reference write-ups authored by me to document architecture and technique; they contain no proprietary or third-party code.</sub>
 
