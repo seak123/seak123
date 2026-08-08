@@ -60,7 +60,7 @@ Core gameplay systems I owned on **_Light of Motiram_** (Tencent) — an open-wo
 Currently **open to gameplay engineering roles** — Melbourne, Australia (also open to remote).
 
 - 📧 **Email** — [yaxinge.evan@gmail.com](mailto:yaxinge.evan@gmail.com)
-- 💼 **LinkedIn** — _add your profile link here_
+- 💼 **LinkedIn** — [www.linkedin.com/in/gameryaxinge/](https://www.linkedin.com/in/gameryaxinge/)
 - 📍 **Location** — Melbourne, AU
 
 Happy to walk through the design decisions behind any of the systems above.
