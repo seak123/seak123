@@ -1,10 +1,12 @@
 # Hi, I'm Yaxin(Evan) 👋
 
-**Gameplay programmer — Unreal Engine & C++ on a shipped commercial title, plus a long trail of Unity / Lua / custom-engine prototypes.** I build gameplay systems end to end — physics, netcode, data-oriented performance, and AI — and the tooling and workflows that let a whole team scale on them.
+**Gameplay programmer — Unreal Engine & C++ on _Light of Motiram_ (Tencent), plus a long trail of Unity / Lua / custom-engine prototypes.** I build gameplay systems end to end — physics, netcode, data-oriented performance, and AI — and the tooling and workflows that let a whole team scale on them.
+
+`UE4/UE5` · `C++` · `GAS` · `Behavior Trees` · `Navmesh` · `Replication / Netcode` · `ECS / Mass` · `Rigid-body Physics` · `Unity` · `C#` · `Lua` · `TypeScript`
 
 ## 💼 Commercial / Shipped Work
 
-Core systems I owned in a shipped commercial **open-world multiplayer** title (**Unreal Engine · C++**). The repositories below are **clean-room reference implementations** — architecture, design decisions, and technique, written for portfolio purposes with **no proprietary source**.
+Core gameplay systems I owned on **_Light of Motiram_** (Tencent) — an open-world multiplayer survival title in **Unreal Engine · C++**, where players build persistent homes, sail player-built watercraft, and automate production with creatures. The repositories below are **clean-room reference implementations** — architecture, design decisions, and technique, written for portfolio purposes with **no proprietary source**.
 
 | System | Repository | Gameplay | Engineering |
 |---|---|---|---|
@@ -27,14 +29,22 @@ Core systems I owned in a shipped commercial **open-world multiplayer** title (*
 | 2021 · Jun | [CybeArtifact](https://github.com/seak123/CybeArtifact) | Unity C# + Lua | Card game framework: login → menu → battle flow with card UI. |
 | 2021 · Apr | [TacticalDeck](https://github.com/seak123/TacticalDeck) | Lua | Turn-based card tactics — round state machine + replayable performer. |
 | 2021 · Apr | [AutoForge](https://github.com/seak123/AutoForge) | Unity C# | Auto-battler: battle-order stream + node-based playback. |
+| 2019 · Jan | ⭐ [WOFFEditor](https://github.com/seak123/WOFFEditor) | WPF C# | Node-based skill/trigger editor — author abilities as node graphs. |
+
+<details>
+<summary><b>Earlier projects (2018 – 2020)</b></summary>
+
+| Date | Project | Tech | What it is |
+|---|---|---|---|
 | 2020 · Sep | [MagicTaleScript](https://github.com/seak123/MagicTaleScript) | TypeScript | WeChat mini-game on a hand-written TS engine framework. |
 | 2020 · Sep | [MagicTale](https://github.com/seak123/MagicTale) | Cocos Creator | WeChat mini-game shooter (2D + 3D). |
 | 2020 · Jul | [TeamFight](https://github.com/seak123/TeamFight) | Lua | Auto-battler with behavior-tree AI + spell/effect system. |
 | 2020 · Jun | [IntelliFight](https://github.com/seak123/IntelliFight) | Unity + Lua | Auto-battler with a grid battlefield, summon & card systems. |
-| 2019 · Jan | [WOFFEditor](https://github.com/seak123/WOFFEditor) | WPF C# | Node-based skill/trigger editor — author abilities as node graphs. |
 | 2018 · Oct | [CardCommander](https://github.com/seak123/CardCommander) | Unity + Lua | Lua-first card battler — thin C# host, 150+ Lua gameplay scripts. |
 | 2018 · Mar | [Scripts](https://github.com/seak123/Scripts) | Unity C# | Entity-component battle core — composable units, data VOs, AI. |
 | 2018 · Mar | [FreeBattle](https://github.com/seak123/FreeBattle) | Unity C# | Battle demo exploring dependency injection. |
+
+</details>
 
 ### 🧭 A few threads across these projects
 - **Auto-battler AI** — behavior trees, blackboards, and priority-based decision-making (TeamFight → IntelliFight → hex-auto-battler).
@@ -42,3 +52,15 @@ Core systems I owned in a shipped commercial **open-world multiplayer** title (*
 - **Engine plumbing** — layered `GameBase / GameCore / GameLogic` architectures, C#↔Lua bridges (xLua), and a from-scratch TypeScript engine.
 
 <sub>Some early ideas also exist as archived variants (e.g. `ArtField` → see `TeamFight`; `NewScripts` → see `CardCommander`).</sub>
+
+---
+
+## 📫 Get in touch
+
+Currently **open to gameplay engineering roles** — Melbourne, Australia (also open to remote).
+
+- 📧 **Email** — [yaxinge.evan@gmail.com](mailto:yaxinge.evan@gmail.com)
+- 💼 **LinkedIn** — _add your profile link here_
+- 📍 **Location** — Melbourne, AU
+
+Happy to walk through the design decisions behind any of the systems above.
