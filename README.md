@@ -1,10 +1,56 @@
-# Hi, I'm Yaxin(Evan) 👋
+# Hi, I'm Evan (Yaxin Ge) 👋
 
-**Gameplay programmer — Unreal Engine & C++ on _Light of Motiram_ (Tencent), plus a long trail of Unity / Lua / custom-engine prototypes.** I build gameplay systems end to end — physics, netcode, data-oriented performance, and AI — and the tooling and workflows that let a whole team scale on them.
+**Game engineer based in Melbourne, with over seven years of commercial experience.** I develop gameplay features end to end, including their associated UI. On **_Light of Motiram_ at Tencent**, my work connected C++ gameplay systems, Lua interface logic and UMG widgets across building, multiplayer and automated production.
 
-`UE4/UE5` · `C++` · `GAS` · `Behavior Trees` · `Navmesh` · `Replication / Netcode` · `ECS / Mass` · `Rigid-body Physics` · `Unity` · `C#` · `Lua` · `TypeScript`
+I focus on making complex game rules understandable and usable: coherent player flows, explicit data and lifecycle boundaries, reusable UI where it fits, and practical debugging and performance work.
 
-## 💼 Commercial / Shipped Work
+`UE4/UE5` · `UMG` · `C++` · `GAS` · `Behavior Trees` · `Navmesh` · `Replication / Netcode` · `ECS / Mass` · `Rigid-body Physics` · `Unity` · `C#` · `Lua` · `TypeScript`
+
+## Selected UI engineering case studies
+
+These three case studies document **my past development and maintenance work on _Light of Motiram_**. Each connects the player experience to implementation, design decisions and observable outcomes.
+
+The code walkthroughs preserve relevant interfaces and call relationships while omitting implementation details. Separately labelled reference models and tests were added for the portfolio; each repository includes its evidence scope and footage credits. The main reading path is in English, with a Chinese README available.
+
+### 1. Building and interactable UI
+
+[![Equipment-workbench UI showing weapon progression, product selection and material requirements.](https://raw.githubusercontent.com/seak123/building-ui-portfolio/main/media/screenshots/Equipment_Workbench.png)](https://github.com/seak123/building-ui-portfolio)
+
+**From placing an object to using it:** building catalogue and contextual controls, equipment and crafting workbenches, storage interactions and item selectors.
+
+- **My work:** initiated the building system and developed its gameplay and associated UI; developed and maintained constructed-object interactions across C++, Lua and UMG.
+- **Key decisions:** specialised layouts for workbench progression, shared inventory presentation for storage, and common material-tracking guidance. Input and actions follow the current panel and building context.
+- **Engineering focus:** UI composition, player recovery flows, interaction lifetime and storage refresh costs.
+
+[Explore the case study →](https://github.com/seak123/building-ui-portfolio) · [Design decisions](https://github.com/seak123/building-ui-portfolio/blob/main/docs/DECISIONS.md) · [Code tour](https://github.com/seak123/building-ui-portfolio/blob/main/docs/CODE_TOUR.md)
+
+### 2. Multiplayer and team UI
+
+[![Team setup with member slots, leader identification and an invitation browser.](https://raw.githubusercontent.com/seak123/multiplayer-ui-portfolio/main/media/screenshots/Team_MainUI.png)](https://github.com/seak123/multiplayer-ui-portfolio)
+
+**From finding teammates to playing together:** team setup, support invitations, compact team status and the in-game party HUD.
+
+- **My work:** developed and maintained team and support UI integration, implemented the party HUD, and worked on state adaptation, refresh performance and ongoing data-freshness fixes.
+- **Key decisions:** translate arena and PvE protocols into a common UI-facing model; separate hiding a panel from leaving a team; give roster structure, live combat values and player profiles different refresh responsibilities.
+- **Engineering focus:** multiplayer state, asynchronous data, callback debugging and logic-layer UI performance.
+
+[Explore the case study →](https://github.com/seak123/multiplayer-ui-portfolio) · [HUD performance](https://github.com/seak123/multiplayer-ui-portfolio/blob/main/docs/HUD_PERFORMANCE.md) · [Design decisions](https://github.com/seak123/multiplayer-ui-portfolio/blob/main/docs/DECISIONS.md)
+
+### 3. Mechanical workers and world-space UI
+
+[![Mechanical workers beside furnaces, with overhead feedback distinguishing movement from active work.](https://raw.githubusercontent.com/seak123/mechanical-workers-ui-portfolio/main/media/screenshots/world-work-phases.png)](https://github.com/seak123/mechanical-workers-ui-portfolio)
+
+**From automated jobs to readable feedback:** production behaviour, overhead work status, item bubbles and data-driven content configuration.
+
+- **My work:** developed and maintained production-to-behaviour integration, world-space feedback, job/payload consistency and the worker-configuration workflow.
+- **Key decisions:** connect behaviour tasks and gameplay abilities to shared status mappings; separate the current activity from its item payload; keep job transitions and destination changes explicit.
+- **Engineering focus:** gameplay-driven UI, behaviour trees and GAS, state lifecycle, and configuration linking Actor Blueprints, work abilities, text, imagery and animation.
+
+[Explore the case study →](https://github.com/seak123/mechanical-workers-ui-portfolio) · [Configuration workflow](https://github.com/seak123/mechanical-workers-ui-portfolio/blob/main/docs/AUTHORING.md) · [Design decisions](https://github.com/seak123/mechanical-workers-ui-portfolio/blob/main/docs/DECISIONS.md)
+
+---
+
+## Gameplay architecture reference projects
 
 Core gameplay systems I owned on **_Light of Motiram_** (Tencent) — an open-world multiplayer survival title in **Unreal Engine · C++**, where players build persistent homes, sail player-built watercraft, and automate production with creatures. The repositories below are **clean-room reference implementations** — architecture, design decisions, and technique, written for portfolio purposes with **no proprietary source**.
 
@@ -57,7 +103,7 @@ Core gameplay systems I owned on **_Light of Motiram_** (Tencent) — an open-wo
 
 ## 📫 Get in touch
 
-Currently **open to gameplay engineering roles** — Melbourne, Australia (also open to remote).
+Currently **open to gameplay and UI engineering roles** — Melbourne, Australia (also open to remote).
 
 - 📧 **Email** — [yaxinge.evan@gmail.com](mailto:yaxinge.evan@gmail.com)
 - 💼 **LinkedIn** — [www.linkedin.com/in/gameryaxinge/](https://www.linkedin.com/in/gameryaxinge/)
