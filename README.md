@@ -8,45 +8,15 @@ I focus on making complex game rules understandable and usable: coherent player 
 
 ## Selected UI engineering case studies
 
-These three case studies document **my past development and maintenance work on _Light of Motiram_**. Each connects the player experience to implementation, design decisions and observable outcomes.
+My development and maintenance work on **_Light of Motiram_** (Tencent), connecting **C++ gameplay systems, Lua interface logic and UMG widgets**.
 
-The code walkthroughs preserve relevant interfaces and call relationships while omitting implementation details. Separately labelled reference models and tests were added for the portfolio; each repository includes its evidence scope and footage credits. The main reading path is in English, with a Chinese README available.
+| System | Repository | Player experience | Engineering |
+|---|---|---|---|
+| 🏗️ **Building and interactable UI** | [building-ui-portfolio](https://github.com/seak123/building-ui-portfolio) | Browse and place objects, craft equipment and consumables, and transfer items between storage and inventory. | Contextual input and placement controls; specialised workbench layouts versus reusable inventory panels; material-tracking guidance, interaction lifecycle and storage refresh costs. |
+| 👥 **Multiplayer and team UI** | [multiplayer-ui-portfolio](https://github.com/seak123/multiplayer-ui-portfolio) | Form teams, invite support, minimise team controls and track teammates through the in-game party HUD. | Common UI-facing state over arena/PvE protocols; asynchronous invitations; callback debugging; structural refresh gating and player-data freshness trade-offs. |
+| ⚙️ **Mechanical workers and world-space UI** | [mechanical-workers-ui-portfolio](https://github.com/seak123/mechanical-workers-ui-portfolio) | Assign production work and read activity, movement and carried-item feedback above autonomous creatures. | Behaviour-tree tasks and GAS-driven status mapping; job/payload consistency; destination changes; data-driven configuration of worker abilities, head text, bubbles and animation. |
 
-### 1. Building and interactable UI
-
-[![Equipment-workbench UI showing weapon progression, product selection and material requirements.](https://raw.githubusercontent.com/seak123/building-ui-portfolio/main/media/screenshots/Equipment_Workbench.png)](https://github.com/seak123/building-ui-portfolio)
-
-**From placing an object to using it:** building catalogue and contextual controls, equipment and crafting workbenches, storage interactions and item selectors.
-
-- **My work:** initiated the building system and developed its gameplay and associated UI; developed and maintained constructed-object interactions across C++, Lua and UMG.
-- **Key decisions:** specialised layouts for workbench progression, shared inventory presentation for storage, and common material-tracking guidance. Input and actions follow the current panel and building context.
-- **Engineering focus:** UI composition, player recovery flows, interaction lifetime and storage refresh costs.
-
-[Explore the case study →](https://github.com/seak123/building-ui-portfolio) · [Design decisions](https://github.com/seak123/building-ui-portfolio/blob/main/docs/DECISIONS.md) · [Code tour](https://github.com/seak123/building-ui-portfolio/blob/main/docs/CODE_TOUR.md)
-
-### 2. Multiplayer and team UI
-
-[![Team setup with member slots, leader identification and an invitation browser.](https://raw.githubusercontent.com/seak123/multiplayer-ui-portfolio/main/media/screenshots/Team_MainUI.png)](https://github.com/seak123/multiplayer-ui-portfolio)
-
-**From finding teammates to playing together:** team setup, support invitations, compact team status and the in-game party HUD.
-
-- **My work:** developed and maintained team and support UI integration, implemented the party HUD, and worked on state adaptation, refresh performance and ongoing data-freshness fixes.
-- **Key decisions:** translate arena and PvE protocols into a common UI-facing model; separate hiding a panel from leaving a team; give roster structure, live combat values and player profiles different refresh responsibilities.
-- **Engineering focus:** multiplayer state, asynchronous data, callback debugging and logic-layer UI performance.
-
-[Explore the case study →](https://github.com/seak123/multiplayer-ui-portfolio) · [HUD performance](https://github.com/seak123/multiplayer-ui-portfolio/blob/main/docs/HUD_PERFORMANCE.md) · [Design decisions](https://github.com/seak123/multiplayer-ui-portfolio/blob/main/docs/DECISIONS.md)
-
-### 3. Mechanical workers and world-space UI
-
-[![Mechanical workers beside furnaces, with overhead feedback distinguishing movement from active work.](https://raw.githubusercontent.com/seak123/mechanical-workers-ui-portfolio/main/media/screenshots/world-work-phases.png)](https://github.com/seak123/mechanical-workers-ui-portfolio)
-
-**From automated jobs to readable feedback:** production behaviour, overhead work status, item bubbles and data-driven content configuration.
-
-- **My work:** developed and maintained production-to-behaviour integration, world-space feedback, job/payload consistency and the worker-configuration workflow.
-- **Key decisions:** connect behaviour tasks and gameplay abilities to shared status mappings; separate the current activity from its item payload; keep job transitions and destination changes explicit.
-- **Engineering focus:** gameplay-driven UI, behaviour trees and GAS, state lifecycle, and configuration linking Actor Blueprints, work abilities, text, imagery and animation.
-
-[Explore the case study →](https://github.com/seak123/mechanical-workers-ui-portfolio) · [Configuration workflow](https://github.com/seak123/mechanical-workers-ui-portfolio/blob/main/docs/AUTHORING.md) · [Design decisions](https://github.com/seak123/mechanical-workers-ui-portfolio/blob/main/docs/DECISIONS.md)
+<sub>Each case includes screenshots, design decisions and code walkthroughs with implementation details omitted. Additional reference models are labelled separately; evidence scope and footage credits are documented in each repository. English documentation with a Chinese README.</sub>
 
 ---
 
