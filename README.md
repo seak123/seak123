@@ -10,7 +10,7 @@ I focus on making complex game rules understandable and usable: coherent player 
 
 Selected systems from my work on **_Light of Motiram_ at Tencent**, covering gameplay architecture, player-facing UI, multiplayer networking, content workflows and performance.
 
-### 1. Building System — featured case study
+### 1. Building System — Architecture, Gameplay & UI
 
 [**Building System portfolio**](https://github.com/seak123/building-ui-portfolio)
 
