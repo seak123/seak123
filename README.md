@@ -1,36 +1,49 @@
 # Hi, I'm Evan (Yaxin Ge) 👋
 
-**Game engineer based in Melbourne, with over seven years of commercial experience.** I develop gameplay features end to end, including their associated UI. On **_Light of Motiram_ at Tencent**, my work connected C++ gameplay systems, Lua interface logic and UMG widgets across building, multiplayer and automated production.
+**Game engineer based in Melbourne, with over seven years of commercial experience.** I develop gameplay features end to end, including their associated UI. On **_Light of Motiram_ at Tencent**, my work connected C++ gameplay systems, Lua interface logic and UMG widgets across building, watercraft, multiplayer and automated production.
 
 I focus on making complex game rules understandable and usable: coherent player flows, explicit data and lifecycle boundaries, reusable UI where it fits, and practical debugging and performance work.
 
 `UE4/UE5` · `UMG` · `C++` · `GAS` · `Behavior Trees` · `Navmesh` · `Replication / Netcode` · `ECS / Mass` · `Rigid-body Physics` · `Unity` · `C#` · `Lua` · `TypeScript`
 
-## Selected UI engineering case studies
+## Selected gameplay and UI portfolio
 
-My development and maintenance work on **_Light of Motiram_** (Tencent), connecting **C++ gameplay systems, Lua interface logic and UMG widgets**.
+Selected systems from my work on **_Light of Motiram_ at Tencent**, covering gameplay architecture, player-facing UI, multiplayer networking, content workflows and performance.
 
-| System | Repository | Player experience | Engineering |
-|---|---|---|---|
-| 🏗️ **Building and interactable UI** | [building-ui-portfolio](https://github.com/seak123/building-ui-portfolio) | Browse and place objects, craft equipment and consumables, and transfer items between storage and inventory. | Contextual input and placement controls; specialised workbench layouts versus reusable inventory panels; material-tracking guidance, interaction lifecycle and storage refresh costs. |
-| 👥 **Multiplayer and team UI** | [multiplayer-ui-portfolio](https://github.com/seak123/multiplayer-ui-portfolio) | Form teams, invite support, minimise team controls and track teammates through the in-game party HUD. | Common UI-facing state over arena/PvE protocols; asynchronous invitations; callback debugging; structural refresh gating and player-data freshness trade-offs. |
-| ⚙️ **Mechanical workers and world-space UI** | [mechanical-workers-ui-portfolio](https://github.com/seak123/mechanical-workers-ui-portfolio) | Assign production work and read activity, movement and carried-item feedback above autonomous creatures. | Behaviour-tree tasks and GAS-driven status mapping; job/payload consistency; destination changes; data-driven configuration of worker abilities, head text, bubbles and animation. |
+### 1. Building System — featured case study
 
-<sub>Each case includes screenshots, design decisions and code walkthroughs with implementation details omitted. Additional reference models are labelled separately; evidence scope and footage credits are documented in each repository. English documentation with a Chinese README.</sub>
+[**Building System portfolio**](https://github.com/seak123/building-ui-portfolio)
 
----
+An end-to-end building system: players select and preview pieces, build persistent homes, and use crafting, cooking and storage objects. My work covered the system architecture, placement rules and controls, associated UI, streaming-aware persistence, content-authoring workflows and optimisation.
 
-## Gameplay architecture reference projects
+The case follows its evolution from a **SpaceUnit / Pivot / Space** model to freer construction and **LiteMass integration**, explaining how rules, persistent data and runtime representation could change without replacing the whole interaction flow.
 
-Core gameplay systems I owned on **_Light of Motiram_** (Tencent) — an open-world multiplayer survival title in **Unreal Engine · C++**, where players build persistent homes, sail player-built watercraft, and automate production with creatures. The repositories below are **clean-room reference implementations** — architecture, design decisions, and technique, written for portfolio purposes with **no proprietary source**.
+[System design](https://github.com/seak123/building-ui-portfolio/blob/main/docs/SYSTEM_DESIGN.md) · [Early spatial rules](https://github.com/seak123/building-ui-portfolio/blob/main/docs/SPATIAL_RULES.md) · [Lifecycles and LiteMass](https://github.com/seak123/building-ui-portfolio/blob/main/docs/LIFECYCLE_AND_SCALE.md)
 
-| System | Repository | Gameplay | Engineering |
-|---|---|---|---|
-| 🚢 **Watercraft physics & netcode** | [watercraft-physics](https://github.com/seak123/watercraft-physics) | Board and crew a player-built raft — paddle or raise the sail and catch the wind, steer by rudder, ride a trochoidal (Gerstner) wave field that shoals toward the coast. | Two buoyancy solutions behind one interface (sample-point vs submerged-volume with a true, self-moving center of buoyancy), frame-rate-independent fixed-substep physics, and sync of players walking on a *moving, rotating* platform via local-frame replication + prediction. |
-| 🏗️ **Data-oriented building** | [data-oriented-building](https://github.com/seak123/data-oriented-building) | Build freely from pieces that snap by priority, must be structurally supported or they collapse, and run production lines on fuel / workload / product queues. | ECS / Mass-style entities + fragments instead of per-actor for **thousands** of persistent objects — instanced rendering, throttled delta replication with weak-net adaptation, capped on-demand actor pool, and support propagation solved by amortized iterative relaxation. |
-| ⚙️ **Automation AI** | [automation-ai-productionline](https://github.com/seak123/automation-ai-productionline) | Assign creatures to stations and they run the line themselves — skill-typed jobs with headcounts, across 13 target kinds from Actors and foliage instances to purely virtual targets. | **GAS + behavior trees + navigation** behind clean seams, so one worker-AI drives any station by data alone; job-driven matching keeps multi-worker jobs staffed, with continuous and endless work modes. |
+### 2. Watercraft Physics and Multiplayer Sailing
 
-<sub>These are reference write-ups authored by me to document architecture and technique; they contain no proprietary or third-party code.</sub>
+[**Watercraft portfolio**](https://github.com/seak123/watercraft-physics) · Architecture reference implementation
+
+Player-built watercraft with buoyancy, paddling, sails and steering. The technical focus is the separation of physics, controls and networking: alternative buoyancy models, fixed-substep integration, responsive input, and synchronising players walking on a moving and rotating boat.
+
+### 3. Multiplayer and Team UI
+
+[**Multiplayer UI portfolio**](https://github.com/seak123/multiplayer-ui-portfolio)
+
+Team formation and matchmaking, support invitations and a contextual party HUD. The case covers a shared UI over different gameplay protocols, adapter lifecycles, asynchronous state, and choosing data-update strategies around player experience and performance cost.
+
+### 4. Mechanical Workers and Automated Production
+
+[**Mechanical workers portfolio**](https://github.com/seak123/mechanical-workers-ui-portfolio)
+
+Configure creatures for production work and communicate their activity through world-space status, text and bubbles. The case connects behaviour-tree tasks, gameplay abilities, job data and UI presentation, with configuration workflows for worker behaviour and feedback.
+
+### Supporting architecture references
+
+- [**Data-oriented building**](https://github.com/seak123/data-oriented-building) — a separate, reduced reference implementation exploring entity data, instanced representation, replication and building operations. Start with the featured Building System case for the full development context.
+- [**Automation AI production line**](https://github.com/seak123/automation-ai-productionline) — a reference implementation of worker/station coordination through data-driven jobs, behaviour trees, GAS and navigation.
+
+The feature case studies include design decisions, screenshots and code walkthroughs with implementation details omitted. Repositories labelled as reference implementations contain separately authored, reduced examples rather than exported production systems.
 
 ---
 
